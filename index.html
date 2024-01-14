@@ -11,7 +11,7 @@
       type="image/x-icon"
     />
 
-    <!--=============== REMIXICONS ===============-->
+    <!--=============== REMIX-ICONS ===============-->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -24,7 +24,40 @@
   </head>
   <body>
     <!--==================== HEADER ====================-->
-    <header class="header" id="header"></header>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav-logo">
+          <img src="./assets/img/logo.png" alt="navbar logo" />Sushi
+        </a>
+
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#popular" class="nav-link">Popular</a>
+            </li>
+            <li class="nav-item">
+              <a href="#recently" class="nav-link">Recently</a>
+            </li>
+          </ul>
+
+          <!-- close button -->
+          <div class="close-button" id="close-button">
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
+
+        <div class="nav-buttons">
+          <!-- change theme button -->
+          <i class="ri-moon-line change-theme" id="change-theme"></i>
+          <!-- toggle button -->
+          <i class="ri-apps-2-line toggle-button" id="toggle-button"></i>
+        </div>
+      </nav>
+    </header>
 
     <!--==================== MAIN ====================-->
     <main class="main">
@@ -49,11 +82,10 @@
 
     <!--========== SCROLL UP ==========-->
 
-    <!--=============== SCROLLREVEAL ===============-->
+    <!--=============== SCROLL-REVEAL ===============-->
     <script src=""></script>
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
   </body>
 </html>
-
