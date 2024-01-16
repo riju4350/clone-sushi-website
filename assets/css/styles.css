@@ -112,13 +112,13 @@ img {
   padding-block: 5rem 1rem;
 }
 
-.section__title {
+.section-title {
   font-size: var(--h1-font-size);
   font-family: var(--title-font);
   margin-bottom: 1.5rem;
 }
 
-.section__subtitle {
+.section-subtitle {
   display: block;
   font-size: var(--h2-font-size);
   font-family: var(--subtitle-font);
@@ -291,7 +291,26 @@ img {
 }
 
 /*=============== ABOUT ===============*/
+.about-data {
+  text-align: center;
+}
 
+.section-title div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+}
+
+.about-title-img {
+  width: 30px;
+}
+
+.about-img {
+  width: 300px;
+  justify-self: center;
+  padding-block: 2rem;
+}
 /*=============== POPULAR ===============*/
 
 /*=============== RECENTLY ===============*/
