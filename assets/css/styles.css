@@ -7,8 +7,8 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(19, 64%, 54%);
-  --first-color-alt: hsl(19, 64%, 52%);
+  --first-color: hsl(19, 79%, 45%);
+  --first-color-alt: hsl(19, 71%, 53%);
   --title-color: hsl(19, 16%, 15%);
   --text-color: hsl(19, 16%, 35%);
   --text-color-light: hsl(19, 8%, 55%);
@@ -150,6 +150,7 @@ img {
   align-items: center;
   justify-content: space-between;
   height: var(--header-height);
+  background-color: var(--container-color);
 }
 
 .nav-logo {
@@ -230,8 +231,64 @@ img {
 /* Active link */
 
 /*=============== HOME ===============*/
+.home-container {
+  text-align: center;
+}
 
+.home-img {
+  width: 300px;
+  justify-self: center;
+  margin-top: 2rem;
+}
+
+.home-title {
+  font-family: var(--title-font);
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-semi-bold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.home-title div {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.home-title img {
+  width: 35px;
+}
+
+.home-description {
+  margin-inline: 2rem;
+  padding-block: 1.5rem 3rem;
+}
 /*=============== BUTTON ===============*/
+.button {
+  background-color: var(--first-color);
+  padding: 1rem 3rem;
+  border-radius: 4rem;
+  color: var(--container-color);
+  font-weight: var(--font-medium);
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  transition: background 0.3s;
+}
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.button i {
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+
+.button:hover i {
+  transform: translateX(0.25rem);
+}
 
 /*=============== ABOUT ===============*/
 
