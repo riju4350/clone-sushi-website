@@ -14,7 +14,7 @@
   --text-color-light: hsl(19, 8%, 55%);
   --body-color: hsl(19, 100%, 96%);
   --container-color: hsl(19, 100%, 97%);
-  --box-shadow: hsla(19, 16%, 64%, 0.1);
+  --box-shadow: hsla(19, 16%, 64%, 0.2);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -64,6 +64,7 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
+  /* background-color: var(--title-color); */
   color: var(--text-color);
   transition: background 0.4s; /* for dark mode animation */
 }
@@ -312,17 +313,245 @@ img {
   padding-block: 2rem;
 }
 /*=============== POPULAR ===============*/
+.popular {
+  text-align: center;
+}
+
+.popular-container {
+  grid-template-columns: 250px;
+  justify-content: center;
+  row-gap: 4rem;
+  margin-top: 5rem;
+}
+
+.card {
+  position: relative;
+  background-color: var(--container-color);
+  border-radius: 1rem;
+  padding-block: 7rem 2rem;
+  box-shadow: 0 8px 20px var(--box-shadow);
+}
+
+.popular-img {
+  width: 220px;
+  position: absolute;
+  top: -2.5rem;
+  left: 1rem;
+  transition: transform 0.3s;
+}
+
+.card:hover .popular-img {
+  transform: translateY(-0.25rem);
+}
+
+.popular-title {
+  font-family: var(--subtitle-font);
+  color: var(--first-color);
+}
+
+.popular-name {
+  font-family: var(--title-font);
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  margin-block: 0.5rem 1rem;
+}
+
+.popular-price {
+  color: var(--first-color);
+  font-size: var(--h3-font-size);
+}
+
+.popular-button {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 2rem;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  background-color: var(--first-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.popular-button:hover {
+  background-color: var(--first-color-alt);
+}
 
 /*=============== RECENTLY ===============*/
+.recently-container {
+  row-gap: 5rem;
+}
+.recently-data {
+  text-align: center;
+}
+
+.recently-data a {
+  margin-top: 3rem;
+}
+
+.recently-img {
+  width: 300px;
+}
 
 /*=============== NEWSLETTER ===============*/
+.newsletter-container {
+  background-color: rgb(84, 39, 39);
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.newsletter-img {
+  width: 250px;
+  position: absolute;
+  top: -5rem;
+  left: -7rem;
+}
+
+.newsletter-content {
+  padding-block: 3rem 2rem;
+  margin-inline: 1rem;
+}
+
+.newsletter-data {
+  justify-self: center;
+  text-align: center;
+}
+
+.newsletter-data h2 {
+  color: #fff;
+}
+
+.newsletter-form {
+  background-color: #fff;
+  border-radius: 4rem;
+  padding: 4px 4px 4px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.newsletter-input {
+  border: none;
+  outline: none;
+  color: var(--text-color);
+}
 
 /*=============== FOOTER ===============*/
+.footer {
+  padding-block: 5rem 2rem;
+}
+.footer-container {
+  margin-inline: 1.5rem;
+  row-gap: 4rem;
+}
 
+.footer-data {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.footer-logo {
+  color: var(--title-color);
+  font-family: var(--title-font);
+  font-weight: var(--font-semi-bold);
+  font-size: var(--h2-font-size);
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.footer-logo img {
+  width: 25px;
+}
+
+.footer-information {
+  grid-template-columns: repeat(2, max-content);
+  gap: 4rem;
+}
+
+.footer-header {
+  font-size: var(--h3-font-size);
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.footer-link {
+  color: var(--text-color);
+}
+
+.footer-social {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.social-link {
+  font-size: 1.5rem;
+  color: var(--first-color);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-link:hover {
+  color: var(--first-color-alt);
+  transform: translateY(-0.25rem);
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.footer-card {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.footer-card img {
+  width: 3rem;
+}
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: 0.7rem;
+  background-color: #d0d0d0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #aeaeae;
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #898989;
+}
 
 /*=============== SCROLL UP ===============*/
+.scroll-up-container {
+  position: relative;
+}
 
+.scroll-up {
+  position: absolute;
+  right: 2rem;
+  bottom: 3.5rem;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 3px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
 /* Show Scroll Up*/
 
 /*=============== BREAKPOINTS ===============*/
